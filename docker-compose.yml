@@ -1,0 +1,11 @@
+version: "3.6"
+services:               
+    construaapi:
+        container_name: construaapi
+        image: construaapi
+        ports:
+          - 9000:80
+        build:
+            context: .
+            dockerfile: Modules/ConstruaApp.Api/Dockerfile         
+        restart: on-failure

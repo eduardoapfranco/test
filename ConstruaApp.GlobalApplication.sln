@@ -1,0 +1,135 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0EFA7CDB-40E4-4CB4-8C11-8BDC480319B9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Services", "1-Services", "{1DA3C4D7-A604-44C4-96F9-4EDE4E32D6FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Application", "2-Application", "{366ADF2B-275E-4017-B7D0-3F4DF6F6FFC1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Domain", "3-Domain", "{1741A30D-329E-475A-A3A7-E9129550615B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-Infra", "4-Infra", "{2F80D290-C614-44E3-B41A-BD64CDB3121F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5-Tests", "5-Tests", "{F410CCFD-F033-48A1-B02A-5D55A2AFBDA3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra.Data", "Modules\Infra.Data\Infra.Data.csproj", "{448F4C58-5E07-401F-ACA3-4277BF8A5352}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra.IoC", "Modules\Infra.IoC\Infra.IoC.csproj", "{6AEDF29B-3E3D-48F5-B8DB-843D16524796}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstruaApp.Api", "Modules\ConstruaApp.Api\ConstruaApp.Api.csproj", "{3556DE37-212F-42AB-B6CD-196112F7733E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Modules\Domain\Domain.csproj", "{EC47E9E6-4F89-4443-9442-A5FB093D8B4D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Modules\Application\Application.csproj", "{856F4886-BB04-4C95-8854-7152D5B8AF8B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTest", "Modules\UnitTest\UnitTest.csproj", "{3362D3B5-8400-4992-864B-77611A0A1E72}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra.CrossCutting", "Modules\Infra.CrossCutting\Infra.CrossCutting.csproj", "{25FE167F-C702-403F-A906-24E5F386538C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationTest", "Modules\IntegrationTest\IntegrationTest.csproj", "{3FC86A17-4EED-4CBF-AA81-2760FE4DE023}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "files", "files", "{95233655-9394-4539-9A08-A56EB1095FEF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Db", "Db", "{7B762171-995B-4227-A175-B70B916F54D4}"
+	ProjectSection(SolutionItems) = preProject
+		Db\add-date-for-user-plans.sql = Db\add-date-for-user-plans.sql
+		Db\alter table constructions.sql = Db\alter table constructions.sql
+		Db\alter table plans add columns id_google e id_apple.sql = Db\alter table plans add columns id_google e id_apple.sql
+		Db\alter table users add column rd_conversion_id.sql = Db\alter table users add column rd_conversion_id.sql
+		Db\alter-table-app-versions.sql = Db\alter-table-app-versions.sql
+		Db\alter-table-auth-profiles.sql = Db\alter-table-auth-profiles.sql
+		alter-table-files-blob-storage-add-blob-id-zip.sql = alter-table-files-blob-storage-add-blob-id-zip.sql
+		Db\alter-table-ratings.sql = Db\alter-table-ratings.sql
+		Db\alter-table-user-plans.sql = Db\alter-table-user-plans.sql
+		Db\alter-table-users-add-colums.sql = Db\alter-table-users-add-colums.sql
+		Db\alter-users-add-column-last-login-date.sql = Db\alter-users-add-column-last-login-date.sql
+		Db\construa-analytics.sql = Db\construa-analytics.sql
+		Db\construa-migracao.sql = Db\construa-migracao.sql
+		Db\constructions.sql = Db\constructions.sql
+		Db\create table areas user_areas.sql = Db\create table areas user_areas.sql
+		Db\create table construction_reports.sql = Db\create table construction_reports.sql
+		Db\create table construction_reports_types - alter table construction_reports.sql = Db\create table construction_reports_types - alter table construction_reports.sql
+		Db\create table user_logins.sql = Db\create table user_logins.sql
+		Db\create tigger tgg_user_logins.sql = Db\create tigger tgg_user_logins.sql
+		Db\create-table-users_payment_methods.sql = Db\create-table-users_payment_methods.sql
+		Db\dar permissão completa pros planos freemium.sql = Db\dar permissão completa pros planos freemium.sql
+		Db\files-blob-storage.sql = Db\files-blob-storage.sql
+		Db\hangfire-bd.sql = Db\hangfire-bd.sql
+		Db\iugu columns signature_id and customer_id.sql = Db\iugu columns signature_id and customer_id.sql
+		Db\plans_types.sql = Db\plans_types.sql
+		Db\reminders2.sql = Db\reminders2.sql
+		Db\trial-plan.sql = Db\trial-plan.sql
+		Db\webhooks.sql = Db\webhooks.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DbSqlite", "DbSqlite", "{23F97F09-1222-4ADB-BE9F-CD868761F353}"
+	ProjectSection(SolutionItems) = preProject
+		create-tables-mobile.sql = create-tables-mobile.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{448F4C58-5E07-401F-ACA3-4277BF8A5352}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{448F4C58-5E07-401F-ACA3-4277BF8A5352}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{448F4C58-5E07-401F-ACA3-4277BF8A5352}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{448F4C58-5E07-401F-ACA3-4277BF8A5352}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AEDF29B-3E3D-48F5-B8DB-843D16524796}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AEDF29B-3E3D-48F5-B8DB-843D16524796}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AEDF29B-3E3D-48F5-B8DB-843D16524796}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AEDF29B-3E3D-48F5-B8DB-843D16524796}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3556DE37-212F-42AB-B6CD-196112F7733E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3556DE37-212F-42AB-B6CD-196112F7733E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3556DE37-212F-42AB-B6CD-196112F7733E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3556DE37-212F-42AB-B6CD-196112F7733E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC47E9E6-4F89-4443-9442-A5FB093D8B4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC47E9E6-4F89-4443-9442-A5FB093D8B4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC47E9E6-4F89-4443-9442-A5FB093D8B4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC47E9E6-4F89-4443-9442-A5FB093D8B4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{856F4886-BB04-4C95-8854-7152D5B8AF8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{856F4886-BB04-4C95-8854-7152D5B8AF8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{856F4886-BB04-4C95-8854-7152D5B8AF8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{856F4886-BB04-4C95-8854-7152D5B8AF8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3362D3B5-8400-4992-864B-77611A0A1E72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3362D3B5-8400-4992-864B-77611A0A1E72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3362D3B5-8400-4992-864B-77611A0A1E72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3362D3B5-8400-4992-864B-77611A0A1E72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25FE167F-C702-403F-A906-24E5F386538C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25FE167F-C702-403F-A906-24E5F386538C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25FE167F-C702-403F-A906-24E5F386538C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25FE167F-C702-403F-A906-24E5F386538C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FC86A17-4EED-4CBF-AA81-2760FE4DE023}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FC86A17-4EED-4CBF-AA81-2760FE4DE023}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FC86A17-4EED-4CBF-AA81-2760FE4DE023}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FC86A17-4EED-4CBF-AA81-2760FE4DE023}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1DA3C4D7-A604-44C4-96F9-4EDE4E32D6FB} = {0EFA7CDB-40E4-4CB4-8C11-8BDC480319B9}
+		{366ADF2B-275E-4017-B7D0-3F4DF6F6FFC1} = {0EFA7CDB-40E4-4CB4-8C11-8BDC480319B9}
+		{1741A30D-329E-475A-A3A7-E9129550615B} = {0EFA7CDB-40E4-4CB4-8C11-8BDC480319B9}
+		{2F80D290-C614-44E3-B41A-BD64CDB3121F} = {0EFA7CDB-40E4-4CB4-8C11-8BDC480319B9}
+		{F410CCFD-F033-48A1-B02A-5D55A2AFBDA3} = {0EFA7CDB-40E4-4CB4-8C11-8BDC480319B9}
+		{448F4C58-5E07-401F-ACA3-4277BF8A5352} = {2F80D290-C614-44E3-B41A-BD64CDB3121F}
+		{6AEDF29B-3E3D-48F5-B8DB-843D16524796} = {2F80D290-C614-44E3-B41A-BD64CDB3121F}
+		{3556DE37-212F-42AB-B6CD-196112F7733E} = {1DA3C4D7-A604-44C4-96F9-4EDE4E32D6FB}
+		{EC47E9E6-4F89-4443-9442-A5FB093D8B4D} = {1741A30D-329E-475A-A3A7-E9129550615B}
+		{856F4886-BB04-4C95-8854-7152D5B8AF8B} = {366ADF2B-275E-4017-B7D0-3F4DF6F6FFC1}
+		{3362D3B5-8400-4992-864B-77611A0A1E72} = {F410CCFD-F033-48A1-B02A-5D55A2AFBDA3}
+		{25FE167F-C702-403F-A906-24E5F386538C} = {2F80D290-C614-44E3-B41A-BD64CDB3121F}
+		{3FC86A17-4EED-4CBF-AA81-2760FE4DE023} = {F410CCFD-F033-48A1-B02A-5D55A2AFBDA3}
+		{7B762171-995B-4227-A175-B70B916F54D4} = {95233655-9394-4539-9A08-A56EB1095FEF}
+		{23F97F09-1222-4ADB-BE9F-CD868761F353} = {95233655-9394-4539-9A08-A56EB1095FEF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E1A4AB64-137D-48C1-B92B-F91C5B76B642}
+	EndGlobalSection
+EndGlobal

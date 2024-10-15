@@ -1,0 +1,14 @@
+docker-compose up -d
+http://localhost:9000/ ou http://localhost:9999
+Login: admin
+Password: bitnami
+
+Provide a token
+ConstruaAppNetCore: 504cb730f0e7035f4ade96ac6daa5f50e6811e11
+
+executar
+
+http://localhost:9999/dashboard?id=ConstruaAppNetCore
+https://sonarcloud.io/documentation/analysis/scan/sonarscanner-for-msbuild/
+http://localhost:9999/dashboard?id=ConstruaAppNetCore
+https://imasters.com.br/back-end/analise-de-codigo-com-sonarqube-docker-net-core

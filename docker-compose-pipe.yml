@@ -1,0 +1,5 @@
+version: "3.6"
+services:               
+    construaapi:
+        environment:
+             - ASPNETCORE_ENVIRONMENT=Pipe

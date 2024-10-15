@@ -1,0 +1,88 @@
+
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- release
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+
+- task: Bash@3
+  displayName: 'Check Public IP'
+  inputs:
+    targetType: 'inline'
+    script: |
+      IP=($(curl -s http://ipinfo.io/json | jq '.ip' | sed -e 's/^"//' -e 's/"$//'))
+      echo "This Microsoft hosted agent public IP is: $IP"
+  
+- task: UseDotNet@2
+  displayName: '.NET Core SDK'
+  inputs:
+    packageType: 'sdk'
+    version: 
+
+- task: DotNetCoreCLI@2
+  displayName: '.NET Core - Restore'
+  inputs:
+    command: 'restore'
+    feedsToUse: 'select'
+
+- task: DotNetCoreCLI@2
+  displayName: '.NET Core - Build'
+  inputs:
+    command: 'build'
+
+- task: DotNetCoreCLI@2
+  displayName: 'Unit Tests && Integration Tests'
+  env: { ASPNETCORE_ENVIRONMENT_CONSTRUA_TEST: test_pipe }
+  inputs:    
+    command: 'test'
+
+- task: CopyFiles@2  
+  displayName: 'Copy Artifacts'
+  inputs:    
+    targetFolder: $(Build.ArtifactStagingDirectory)
+    Contents: |
+      **
+      !.git/**
+      !Modules/Application/bin/**
+      !Modules/ConstruaApp.Api/bin/**
+      !Modules/Domain/bin/**.*
+      !Modules/Infra.CrossCutting/bin/**
+      !Modules/Infra.Data/bin/**
+      !Modules/Infra.IoC/bin/**
+      !Modules/IntegrationTest/bin/**
+      !Modules/UnitTest/bin/**
+      !Modules/Application/obj/**
+      !Modules/ConstruaApp.Api/obj/**
+      !Modules/Domain/obj/**.*
+      !Modules/Infra.CrossCutting/obj/**
+      !Modules/Infra.Data/obj/**
+      !Modules/Infra.IoC/obj/**
+      !Modules/IntegrationTest/obj/**
+      !Modules/UnitTest/obj/**
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifacts'
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+    StoreAsTar: true
+
+# - task: Docker@2
+#   displayName: 'Docker Register Container - Repository'
+#   inputs:
+#     containerRegistry: 'API Net Core Container Private'
+#     repository: 'apinetcorecontainerprivate'
+#     command: 'buildAndPush'
+#     buildContext: $(Build.Repository.LocalPath)
+#     Dockerfile: '**/Dockerfile'
+#     tags: |
+#       $(Build.BuildId)
+#       latest
